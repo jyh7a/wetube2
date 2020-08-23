@@ -13,7 +13,8 @@ import globalRouter from "./routers/globalRouter";
 const app = express();
 
 app
-  .use(helmet())
+  .use( helmet({ contentSecurityPolicy: false }))
+  // .use( helmet())
   .set('view engine', 'pug')
   .use(cookieParser())
   .use(bodyParser.urlencoded({ extended: true }))
