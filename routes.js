@@ -31,12 +31,24 @@ const routes = {
   logout: LOGOUT,
   search: SERARCH,
   users: USERS,
-  userDetail: USER_DETAIL,
+  userDetail: (id) => {
+    if(id){
+      return `/users/${id}`
+    }else{
+      return USER_DETAIL
+    }
+  },
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
   videos: VIDOES,
   upload: UPOLAD,
-  videoDetail: VIDOE_DETAIL,
+  videoDetail: (id) => {
+    if(id){
+      return `/videos/${id}`
+    }else{
+      return VIDOE_DETAIL;
+    }
+  },
   editVideo: EDIT_VIDEO,
   deleteVideo: DELETE_VIDEO
 }
