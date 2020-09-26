@@ -16,6 +16,7 @@ app
   .use( helmet({ contentSecurityPolicy: false }))
   // .use( helmet())
   .set('view engine', 'pug')
+  .use("/uploads", express.static("uploads"))
   .use(cookieParser())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
