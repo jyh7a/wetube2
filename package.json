@@ -4,26 +4,41 @@
   "description": "Cloing Youtube with js and node",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node init.js --delay 2"
+    "dev:server": "nodemon --exec babel-node init.js --delay 2",
+    "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
+    "build:assets": "WEBPACK_ENV=production webpack"
   },
   "author": "jyh7a",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
+    "@babel/polyfill": "^7.11.5",
     "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^10.0.0",
+    "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "helmet": "^4.1.0",
     "mongoose": "^5.10.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "pug": "^3.0.0"
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "pug": "^3.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "eslint": "^7.9.0",
-    "nodemon": "^2.0.4"
+    "mini-css-extract-plugin": "^0.11.2",
+    "nodemon": "^2.0.4",
+    "postcss": "^8.0.9",
+    "sass-loader": "^7.1.0"
   }
 }

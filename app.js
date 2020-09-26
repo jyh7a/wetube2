@@ -13,10 +13,11 @@ import globalRouter from "./routers/globalRouter";
 const app = express();
 
 app
-  .use( helmet({ contentSecurityPolicy: false }))
+  .use(helmet({ contentSecurityPolicy: false }))
   // .use( helmet())
-  .set('view engine', 'pug')
+  .set("view engine", "pug")
   .use("/uploads", express.static("uploads"))
+  .use("/static", express.static("static"))
   .use(cookieParser())
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
@@ -25,6 +26,6 @@ app
 
   .use(routes.home, globalRouter)
   .use(routes.users, userRouter)
-  .use(routes.videos, videoRouter)
+  .use(routes.videos, videoRouter);
 
-export default app
+export default app;

@@ -6,6 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title #{pageTitle} | #{siteName}
     link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.14.0/css/all.css", integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc", crossorigin="anonymous")
+    link(rel="stylesheet", href="/static/styles.css")
     meta(http-equiv="Content-Security-Policy",
      content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'")
   body
@@ -16,3 +17,5 @@ html(lang="en")
       block content
 
     include ../partials/footer
+
+    script(src="/static/main.js")
