@@ -1,0 +1,25 @@
+.video-detail__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .video__info{
+    width: 100%;
+    max-width: 850px;
+    margin-top: 50px;
+    button{
+      width: 200px;
+      margin-bottom: 15px;
+    }
+    .video__title,
+    .video__views,
+    .video__description{
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  video{
+    width: 100%;
+  }
+}
+
